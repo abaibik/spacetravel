@@ -10,7 +10,7 @@ export default function Root() {
       <header class="primary-header">
         <div>
           <img
-            src="./assets/shared/logo.svg"
+            src="../assets/shared/logo.svg"
             alt="space tourism logo"
             className="logo"
           />
