@@ -5,17 +5,16 @@ export default function Root() {
   const { pathname } = useLocation();
   const homePath = "/";
 
-  //   <nav>
-  //                         <ul class="primary-navigation underline-indicators flex">
-  //                             <li class="active"><a class="uppercase text-white letter-spacing-2" href="#"><span>01</span>Active</a>
-  //                             <li><a class="uppercase text-white letter-spacing-2" href="#"><span>02</span>Hovered</a>
-  //                             <li><a class="uppercase text-white letter-spacing-2" href="#"><span>03</span>Idle</a>
-  //                         </ul>
-  //                     </nav>
-
   return (
-    <>
-      <div>
+    <div>
+      <header class="primary-header">
+        <div>
+          <img
+            src="./assets/shared/logo.svg"
+            alt="space tourism logo"
+            className="logo"
+          />
+        </div>
         <nav>
           <ul className="primary-navigation underline-indicators flex">
             <li>
@@ -59,11 +58,11 @@ export default function Root() {
             </li>
           </ul>
         </nav>
+      </header>
 
-        <div id="detail">
-          <Outlet />
-        </div>
+      <div id="detail">
+        <Outlet />
       </div>
-    </>
+    </div>
   );
 }
