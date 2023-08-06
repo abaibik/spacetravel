@@ -179,3 +179,116 @@ select {
   font-weight: 700;
   color: hsl(var(--clr-white) /.25);
 }
+
+/*------------*/
+/* Components */
+/*------------*/
+
+.large-button {
+  position: relative;
+  display: grid;
+  z-index: 1;
+  place-items: center;
+  padding: 0 2em;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  text-decoration: none;
+}
+
+.large-button::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: hsl( var(--clr-white) / .15);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 500ms linear, transform 750ms ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+.primary-navigation {
+  --gap: 8rem;
+  --underline-gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation a > span {
+  font-weight: 700;
+  margin-right: .5em;
+}
+
+.underline-indicators > * {
+  cursor: pointer;
+  border: 0;
+  padding: var(--underline-gap, 1rem) 0;
+  border-bottom: .2rem solid hsl( var(--clr-white) /0 );
+}
+
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: hsl( var(--clr-white) / .5);
+}
+
+.underline-indicators > .active,
+.underline-indicators > [aria-selected="true"] {
+  color: hsl( var(--clr-white) / 1);
+  border-color: hsl( var(--clr-white) / 1);
+}
+
+.dot-indicators > * {
+  cursor: pointer;
+  border: 0;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  padding: .5em;
+  background-color: hsl( var(--clr-white) / .25);
+}
+
+.dot-indicators > *:hover,
+.dot-indicators > *:focus {
+  background-color: hsl( var(--clr-white) / .5);
+}
+
+.dot-indicators > [aria-selected="true"] {
+  background-color: hsl( var(--clr-white) / 1); 
+}
+
+.numbers {
+  flex-direction: column;
+}
+
+.numbers > * {
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  background-color: hsl( var(--clr-dark));
+  border: 1px solid hsl( var(--clr-light) / .5);
+  color: hsl( var(--clr-white) / 1);
+}
+
+.numbers > *:hover,
+.numbers > *:focus {
+  border: 1px solid hsl( var(--clr-white) / 1);
+}
+
+.numbers > .active,
+.numbers > [aria-selected="true"] {
+  background-color: hsl( var(--clr-white) / 1);
+  border: 1px solid hsl( var(--clr-white) / 1);
+  color: hsl( var(--clr-dark));
+}
