@@ -1,4 +1,4 @@
-import { ErrorPage } from "../pages/ErrorPage";
+import { ErrorPage } from "../pages/errorPage/ErrorPage";
 import { Home } from "../pages/Home";
 import Root from "./root";
 

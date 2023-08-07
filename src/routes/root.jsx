@@ -1,5 +1,6 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import "../index.css";
+import Logo from "../assets/shared/logo.svg";
 
 export default function Root() {
   const { pathname } = useLocation();
@@ -7,13 +8,9 @@ export default function Root() {
 
   return (
     <div>
-      <header class="primary-header">
+      <header className="primary-header flex">
         <div>
-          <img
-            src="../assets/shared/logo.svg"
-            alt="space tourism logo"
-            className="logo"
-          />
+          <img src={Logo} alt="space tourism logo" className="logo" />
         </div>
         <nav>
           <ul className="primary-navigation underline-indicators flex">
