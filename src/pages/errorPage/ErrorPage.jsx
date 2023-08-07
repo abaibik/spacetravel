@@ -1,7 +1,6 @@
 import "./errorPage.css";
 import React, { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
-import Circle from "./Circle";
 
 const animation = gsap.timeline({
   paused: false,
@@ -30,7 +29,7 @@ export function ErrorPage() {
 
   return (
     <div ref={errorPage} className="container">
-      <Circle ref={circle} />
+      <div className="circle" ref={circle}></div>
       <h1>404</h1>
       <h2>Page Not Found</h2>
     </div>
